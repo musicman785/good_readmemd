@@ -67,8 +67,17 @@ async function init() {
     //var holds user answers to questions
     const userResponse = await inquirer.prompt(questions);
     console.log(userResponse);
-
+    const {name, title, description} = userResponse
+    console.log(name);
+    console.log(title);
+    console.log(description);
+    
+    
 //call writeToFile() function
-}
+};  
 //call init() function to  
 init();
+module.exports = [{
+    name: "name",
+    title: "title"
+}];
