@@ -9,7 +9,7 @@ const questions = [
     { 
         type: "input",
         message: "What is your github user name?",
-        name: "githubName"
+        name: "name"
     },
     {
         type: "input",
@@ -48,7 +48,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "Examples to run tests:g",
+        message: "Examples to run tests:",
         name: "tests"
     }
 ];
@@ -58,16 +58,17 @@ const questions = [
 
 // function to save user input to file
 function writeToFile(fileName, data) {
-    
+   
 
 }
-// function to initiate questions
-function init() {
-    
-    inquirer.prompt(questions);
-    
-    
-    
+
+// Function displays questions in command line
+async function init() {
+    //var holds user answers to questions
+    const userResponse = await inquirer.prompt(questions);
+    console.log(userResponse);
+
+//call writeToFile() function
 }
-//call init() to 
+//call init() function to  
 init();
