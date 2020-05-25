@@ -4,9 +4,12 @@ const inquirer = require("inquirer");
 //var for file system module
 const fs = require("fs");
 
+//var for generate markdown function
+const generateMarkdown = require("./utils/generateMarkdown.js");
+
 // const var for questions array
 const questions = [
-    { 
+    {
         type: "input",
         message: "What is your github user name?",
         name: "name"
@@ -58,7 +61,15 @@ const questions = [
 
 // function to save user input to file
 function writeToFile(fileName, data) {
-   
+    console.log(fileName);
+fs.writeFile(fileName, data, function(err) {
+    if (err){
+        console.log(err)
+    }else {
+        console.log("success!");
+    }
+    
+});
 
 }
 
@@ -67,17 +78,13 @@ async function init() {
     //var holds user answers to questions
     const userResponse = await inquirer.prompt(questions);
     console.log(userResponse);
-    const {name, title, description} = userResponse
-    console.log(name);
-    console.log(title);
-    console.log(description);
+    const { name, title, description } = userResponse
+
+    const markdown = generateMarkdown({name, title, description});
+    //call writeToFile() function
+    writeToFile("Response.md", markdown);
     
-    
-//call writeToFile() function
-};  
+};
 //call init() function to  
 init();
-module.exports = [{
-    name: "name",
-    title: "title"
-}];
+

@@ -1,8 +1,9 @@
-const userResponse = require("../index.js");
-console.log(userResponse.name);
+
 function generateMarkdown(data) {
+  console.log(data);
   return `
 # ${data.title}
+
 
 `;
 }
