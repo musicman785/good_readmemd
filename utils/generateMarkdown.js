@@ -16,16 +16,16 @@ ${data.description}
 *[Author](#author)
 
 ## Installation
-${data.installation}
+> ${data.installation}
  
 #Instruction
-${data.instructions}
+> ${data.instructions}
 
 ## License
 This project is licensed under the ${data.license} - see ${data.licenseURL} for details
 
 ## Contributors
-${data.contributors}
+${data.contributorsURLstring}
 
 ## Tests
 ${data.tests}
@@ -34,7 +34,7 @@ ${data.tests}
 \n**${data.name}**
 \nEmail: ${data.email}
 \nLocation: ${data.location}
-\nGithub: ${data.url}
+\nGithub: ${data.html_url}
 
 `;
 }

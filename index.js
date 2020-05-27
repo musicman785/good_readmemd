@@ -92,26 +92,26 @@ async function init() {
     console.log(githubInfo);
 
     //variable to deconstruct object from axios api call and pull only needed info
-    const { data: { avatar_url, url, location, email }} = githubInfo
+    const { data: { avatar_url, html_url, location, email }} = githubInfo
 
     //variable to collect github contributors into an array
     const contributorArray = contributors.split(",");
-  // await and async functions will eliminate pending promises
-   contributorArray.forEach(async function(element){
-    
-    // variable to hold names of contributors   
-    const contributorsName = element;
 
-    // await and async functions will eliminate pending promises
-    const contributorInfo = await axios.get(`https://api.github.com/users/${contributorsName}`);
-    // let variable for contributo url
-    let {data:{url}} = contributorInfo;
-    // variable holds value of contributor url
-    let contributorURL = url;
-    console.log(contributorURL);
+    let contributorsURLstring = ``;
+
+
+   contributorArray.forEach(function(element){
+    
+   let url = `http://github.com/${element}`;
+
+   const mdString = `\n[${element}](${url})\n`;
+
+   contributorsURLstring += mdString;
+
+    
    });
     //variable to call generateMarkdown function with arguments from other file
-    const markdown = generateMarkdown({ name, title, description, installation, instructions, license, licenseURL, contributors, tests, avatar_url, url, location, email });
+    const markdown = generateMarkdown({ name, title, description, installation, instructions, license, licenseURL, contributorsURLstring, tests, avatar_url, html_url, location, email });
 
     //call writeToFile() function with filename and data arguments
     writeToFile("Response.md", markdown);
