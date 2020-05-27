@@ -1,6 +1,8 @@
 
-none
-test
+ 
+  ![GitHub repo size](https://img.shields.io/github/repo-size/musicman785/good_readme?logo=github)
+  good_readme
+  yes
 
 # Table of Contents
 
@@ -9,26 +11,33 @@ test
 *[License](#license)
 *[Contributors](#contributors)
 *[Tests](#tests)
+*[Acknowledgements](#acknowlegments)
 *[Author](#author)
 
 ## Installation
-test
+> enter
  
 #Instruction
-test
+> none
 
 ## License
 This project is licensed under the none - see none for details
 
 ## Contributors
 
-[musicman785](http://github.com/musicman785)
-
 [MikelTafalla](http://github.com/MikelTafalla)
+
+[musicman785](http://github.com/musicman785)
 
 
 ## Tests
 yes
+## Acknowledgements
+
+chris me@gmail.com
+
+Mikel you@gmail.com
+
 ## Author
 
 [ProfileImage](https://avatars2.githubusercontent.com/u/62310334?v=4)
@@ -37,7 +46,7 @@ yes
 
 Email: null
 
-Location: null
+Location: Los Angeles
 
 Github: https://github.com/musicman785
 

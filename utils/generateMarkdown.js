@@ -3,8 +3,10 @@
 function generateMarkdown(data) {
   console.log(data)
   return `
-${data.title}
-${data.description}
+ 
+  ${data.badge}
+  ${data.title}
+  ${data.description}
 
 # Table of Contents
 
@@ -13,6 +15,7 @@ ${data.description}
 *[License](#license)
 *[Contributors](#contributors)
 *[Tests](#tests)
+*[Acknowledgements](#acknowlegments)
 *[Author](#author)
 
 ## Installation
@@ -29,6 +32,8 @@ ${data.contributorsURLstring}
 
 ## Tests
 ${data.tests}
+## Acknowledgements
+${data.acknowledgeStr}
 ## Author
 \n[ProfileImage](${data.avatar_url})
 \n**${data.name}**
