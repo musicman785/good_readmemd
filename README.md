@@ -6,6 +6,11 @@
   
 Create command-line application that dynamically generates ad README.md from a user's input.The user will be prompted for their GitHub username and other information pertaining to the project the READMD is for.
 
+# Technologies Used
+1. node.js
+2. npm
+3. ES6
+
 # Table of Contents
 
 * [Installation](#installation)

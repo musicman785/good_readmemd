@@ -120,7 +120,7 @@ async function init() {
     let contributorsURLstring = ``;
 
     //forEach loop for contributor iteration
-    contributorArray.forEach(function (element) {
+    contributorArray.forEach(element => {
 
         // variable holds contributors github address 
         let url = `http://github.com/${element}`;
@@ -136,7 +136,7 @@ async function init() {
     //Global variable to hold names of people
     let acknowledgeStr  = ``;
     //forEach loop to itirate names of people in acknowledgements
-    acknowledgeArr.forEach(function(people) {
+    acknowledgeArr.forEach(people => {
        
         //variable holds string of people from loop
         const peopleStr = `\n${people}\n`;
