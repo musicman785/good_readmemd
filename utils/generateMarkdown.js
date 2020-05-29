@@ -35,7 +35,7 @@ ${data.tests}
 ## Acknowledgements
 ${data.acknowledgeStr}
 ## Author
-\n[ProfileImage](${data.avatar_url})
+\n![ProfileImage](${data.avatar_url})
 \n**${data.name}**
 \nEmail: ${data.email}
 \nLocation: ${data.location}

@@ -38,17 +38,17 @@ const questions = [
     },
     {
         type: "input",
-        message: "Provide license name (Example: MIT):",
+        message: "Provide license name (Example: MIT) if not enter Not Applicable",
         name: "license"
     },
     {
         type: "input",
-        message: "What is license URL?",
+        message: "What is license URL? if not enter '#'",
         name: "licenseURL"
     },
     {
         type: "input",
-        message: "Enter github user names of the contributors if any (If there are mulitple contributor, seperate names with comma and no space!):",
+        message: "Enter github user names of the contributors if any (If there are mulitple contributors, seperate names with comma and no space!):",
         name: "contributors"
     },
     {
@@ -148,7 +148,7 @@ async function init() {
     const markdown = generateMarkdown({ name, title, description, installation, instructions, license, licenseURL, contributorsURLstring, tests, avatar_url, html_url, location, email, badge, acknowledgeStr});
 
     //call writeToFile() function with filename and data arguments
-    writeToFile("Response.md", markdown);
+    writeToFile("NewREADME.md", markdown);
 
 };
 //call init() function to begin prompting user questions
