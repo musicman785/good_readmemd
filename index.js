@@ -145,7 +145,7 @@ async function init() {
 
     })
     //variable to call generateMarkdown function with arguments from other file
-    const markdown = generateMarkdown({ name, title, description, installation, instructions, license, licenseURL, contributorsURLstring, tests, avatar_url, html_url, location, email, badge, acknowledgeStr});
+    const markdown = generateMarkdown({ name, title, description, installation, instructions, licensePrint, contributorsURLstring, tests, avatar_url, html_url, location, email, badge, acknowledgeStr});
 
     //call writeToFile() function with filename and data arguments
     writeToFile("NewREADME.md", markdown);

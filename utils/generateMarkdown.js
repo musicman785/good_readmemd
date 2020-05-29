@@ -4,28 +4,28 @@ function generateMarkdown(data) {
   console.log(data)
   return `
  
-  ${data.badge}
-  ${data.title}
-  ${data.description}
+  # ${data.title}
+  \n${data.badge}
+  \n${data.description}
 
 # Table of Contents
 
-*[Installation](#installation)
-*[Instructions](#instructions)
-*[License](#license)
-*[Contributors](#contributors)
-*[Tests](#tests)
-*[Acknowledgements](#acknowlegments)
-*[Author](#author)
+* [Installation](#installation)
+* [Instructions](#instructions)
+* [License](#license)
+* [Contributors](#contributors)
+* [Tests](#tests)
+* [Acknowledgements](#acknowlegments)
+* [Author](#author)
 
 ## Installation
 > ${data.installation}
  
-#Instruction
+## Instructions
 > ${data.instructions}
 
 ## License
-This project is licensed under the ${data.license} - see ${data.licenseURL} for details
+${data.licensePrint}  
 
 ## Contributors
 ${data.contributorsURLstring}
