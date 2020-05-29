@@ -84,13 +84,23 @@ function writeToFile(fileName, data) {
 
 // Function displays questions in command line
 async function init() {
+   // Greeting for user
     console.log("Let's create your ReadMe");
+    // Statement to let user know to use proper name on first question
+    console.log("Please do not leave name question blank.");
+
     //var holds user answers to questions
     const userResponse = await inquirer.prompt(questions);
     console.log(userResponse);
 
     //variable to deconstruct user responses
-    const { name, title, description, installation, instructions, license, licenseURL, contributors, tests, acknowledgments} = userResponse
+    const { name, title, description, installation, instructions, license, licenseURL, contributors, tests, acknowledgments} = userResponse;
+    
+    //conditional statement returns user to start of questions if name is left blank 
+    if (name === ""){
+        return init();
+    }
+
     const badge = `![GitHub repo size](https://img.shields.io/github/repo-size/${name}/${title}?logo=github)`;
     //variable creates license url dynamically
     const licensePrint = `\n[${license}](${licenseURL})\n`;
