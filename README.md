@@ -41,6 +41,8 @@ Create command-line application that dynamically generates ad README.md from a u
 
 ## Tests
 Once the file is generated go inside it on VSCode and do right click on its tab and click open preview; or go to the generated file on VSCode and hit: cmd + k + v (mac) or ctrl + k + v (windows)
+### Example giffy: 
+ ![](assets/goodread_me.gif)
 ## Acknowledgements
 
 
